@@ -12,12 +12,13 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0',          group: :doc
 
-gem 'spring',        group: :development
+
 group  :production do
   gem 'pg'
   gem 'rails_12factor'
 end
 group :development, :test do
+  gem 'spring'
   gem 'sqlite3'
   gem 'pry'
 end
