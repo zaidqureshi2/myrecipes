@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  like: false
+  chef_id: 
+  recipe_id: 
+
+two:
+  like: false
+  chef_id: 
+  recipe_id: 

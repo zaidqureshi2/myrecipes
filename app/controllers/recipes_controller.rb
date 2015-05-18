@@ -1,12 +1,18 @@
 class RecipesController < ApplicationController
   def index
-    @recipes= Recipe.all
+    @recipes= Recipe.paginate(page: params[:page], per_page: 4)
   end
   def show
     @recipe = Recipe.find(params[:id])
   end
   def new
     @recipe = Recipe.new
+  end
+  def like
+    @recipe = Recipe.find(params[:id])
+    Like.create(like: params[:like],chef: Chef.first,recipe: @recipe)
+    flash[:success]="Your selection was successful"
+    redirect_to :back
   end
   def create
     @recipe = Recipe.new(recipe_params) 
